@@ -57,12 +57,12 @@ numberShardsMinusOne=params.j-1;
 
 ---------------------------------------------------*/
 
-params.hg19="true";
+params.hg19="";
 params.h38="";
 params.test="";
 params.hg19chr20="";
 params.grch37primary="";
-params.hs37d5="";
+params.hs37d5="true";
 
 params.fasta="nofasta";
 params.fai="nofai";
