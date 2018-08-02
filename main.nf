@@ -15,19 +15,20 @@ import java.util.List;
 ---------------------------------------------------*/
 params.modelFolder="s3://deepvariant-data/models"
 params.modelName="model.ckpt";
-params.exome="";
+params.exome="true";
 if(params.exome){
   model=file("s3://deepvariant-data/models/exome");
 }
 else{
   model=file("${params.modelFolder}");
 }
+params.bam_folder=""
 
 
 /*--------------------------------------------------
   Using the BED file
 ---------------------------------------------------*/
-params.bed=""
+params.bed="s3://rosalind-test-data/bedfiles/agilent_sureselect_human_all_exon_v5_b37_targets.bed"
 if(params.exome){
   assert (params.bed != true) && (params.bed != null) : "please specify --bed option (--bed bedfile)"
   bedfile=file("${params.bed}")
@@ -138,6 +139,7 @@ if(params.test){
     params.bam_folder="$baseDir/testdata"
 }
 
+params.bam_folder="s3://rosalind-test-data/Final1000Gexomes/1000Genomes-exome-final"
 assert (params.bam_folder != true) && (params.bam_folder != null) : "please specify --bam_folder option (--bam_folder bamfolder)"
 
 
