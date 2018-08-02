@@ -22,7 +22,6 @@ if(params.exome){
 else{
   model=file("${params.modelFolder}");
 }
-params.bam_folder=""
 
 
 /*--------------------------------------------------
