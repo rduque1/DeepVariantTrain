@@ -138,7 +138,7 @@ if(params.test){
     params.bam_folder="$baseDir/testdata"
 }
 
-params.bam_folder="s3://rosalind-test-data/Final1000Gexomes/1000Genomes-exome-final"
+params.bam_folder="s3://rosalind-test-data/1000Genomes-exome-final"
 assert (params.bam_folder != true) && (params.bam_folder != null) : "please specify --bam_folder option (--bam_folder bamfolder)"
 
 
